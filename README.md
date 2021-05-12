@@ -6,7 +6,7 @@
 
 
 <h3>2.Dashboard edit personal information</h3>
-<h4>修改會員個人資料</h4>
+<h4>修改會員個人資料雙向綁定</h4>
 <p>會員登入後台,修改會員個人資料</p>
 (https://corly74.github.io/vue-sample/Edit_myInformation.html)
 
