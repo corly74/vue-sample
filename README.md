@@ -18,7 +18,7 @@
 
 
 <h3>4.Search course by label classification Drop-down menu& text in the search box </h3>
-<h4>大量列表外速搜尋資料</h4>
+<h4>大量列表資料裡速搜尋資料</h4>
 <p>讓學生藉由lable選單和input輸入文字搜尋列表裡教材資料</p>
 (https://corly74.github.io/vue-sample/SearchClass.html)
 
