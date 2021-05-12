@@ -16,3 +16,11 @@
 <p>讓老師新增教材在列表單</p>
 (https://corly74.github.io/vue-sample/addMaterial.html)
 
+
+<h3>4.Search course by label classification Drop-down menu& text in the search box </h3>
+<h4>大量列表外速搜尋資料</h4>
+<p>讓學生在列表藉由lable選單和input輸入文字</p>
+(https://corly74.github.io/vue-sample/SearchClass.html)
+
+
+
