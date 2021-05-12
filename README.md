@@ -13,7 +13,7 @@
 
 <h3>3.Teacher add new class materials</h3>
 <h4>教師新增教材</h4>
-<p>讓老師新增教材在列表單</p>
+<p>讓老師新增教材在列表單, 在文字框輸入文字按下ENTER，畫面即出現新的課程列表</p>
 (https://corly74.github.io/vue-sample/addMaterial.html)
 
 
