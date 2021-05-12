@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher add new class materials</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+</head>
+<style>
+    body {
+        background-color: rgb(245, 244, 240) !important;
+    }
+
+    .datalist {
+        width: 72.3vw;
+        height: auto;
+        padding: 2.5vh 2.5vw 2.5vh 4.5vw;
+        border-radius: 10px;
+        background-color: rgb(255, 255, 255);
+        margin-left: 15vw;
+    }
+
+
+
+    .libg {
+
+
+
+        flex: 0 0 55%;
+        max-width: 47.666667%;
+
+
+    }
+
+    .dark-g {
+        color: rgb(49, 65, 64);
+    }
+
+    .letter-sp-1 {
+        letter-spacing: 1px;
+    }
+
+    .col-55 {
+        flex: 0 0 55%;
+        max-width: 47.666667%;
+
+
+    }
+
+    .vue-list {
+        flex: 0 0 55%;
+        max-width: 47.666667%;
+    }
+
+    .nolist {
+        background-color: #e31837;
+        color: white;
+        border-radius: 5px 0px 0px 5px;
+        padding: .2rem .6rem .6rem 0rem;
+        width: 50px;
+        height: 40px;
+
+    }
+
+    .catolog {
+        background-color: rgb(19, 9, 43);
+        color: white;
+        padding: .6rem .6rem;
+        width: 10vw;
+        height: 40px;
+    }
+
+    .vue-title {
+
+        background-color: rgb(53, 137, 247);
+        color: rgb(49, 65, 64);
+
+        width: 25vw;
+        height: 40px;
+    }
+</style>
+
+<body>
+    <div id="app">
+        <h1 class="mt-5 text-center">Teacher add new class materials</h1>
+        <div class="container mt-5">
+            <div class="d-felx justify-content-center">
+
+                <div class="form-row align-items-center">
+                    <div class=" col-4 my-1 ">
+                        <label class=" sr-only" >Preference</label>
+                        <select v-model="input.type" class=" custom-select "  >
+
+                            <option>Listening</option>
+                            <option>Grammar</option>
+                            <option>Vocabulary</option>
+                            <option>Speaking</option>
+                           
+                           
+                        </select>
+                        
+                      
+                    </div>
+                    
+                    <div class="col-8 my-1">
+
+                        <label class="sr-only" for="inlineFormInputName">Name</label>
+                        <input type="text" class="form-control" id="inlineFormInputName" placeholder=""
+                            v-model.trim="input.title" @keyup.enter="inpuHandler" >
+
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="row datalist ml-0 mt-5 ">
+                <div class="col-55  libg mx-2 my-3 vue-list d-flex" v-for="(item , index) in menu">
+                    <div class="nolist ml-n2 pt-2 pl-2">{{index + 1}}</div>
+                    <div class="catolog ml-n1 pt-2">{{item.type}}</div>
+                    <a class="pl-2 letter-sp-1 text-decoration-none dark-g vue-title pt-2"
+                        target="vue-iron ">{{item.title}}</a>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        let data = {
+
+            input: {
+                type: 'Listening',
+                title: '',
+                link:'javascript:;'
+            },
+            menu: [
+                { type: 'Listening', title: 'Diagram Labeling ', link: 'https://www.ielts.org/' },
+                { type: 'Reading', title: 'Flowchart - Natural Water Cycle', link: 'https://www.ielts.org/' },
+                { type: 'Grammar', title: 'Line charts ', link: 'https://www.ielts.org/' },
+                { type: 'Grammar', title: 'Pie charts ', link: 'https://www.ielts.org/' },
+                { type: 'Vocabulary', title: 'Topics ', link: 'https://www.ielts.org/' },
+                { type: 'Listening', title: 'Map Labeling ', link: 'https://www.ielts.org/' },
+                { type: 'Speaking', title: ' Negotiation Skills', link: 'https://www.ielts.org/' },
+                { type: 'Reading', title: 'Diagrams and illustrations ', link: 'https://www.ielts.org/' },
+                { type: 'Grammar', title: 'Bar charts', link: 'https://www.ielts.org/' },
+                { type: 'Reading', title: 'Finance ', link: 'https://www.ielts.org/' },
+                { type: 'Listening', title: 'Multiple Choice ', link: 'https://www.ielts.org/' },
+                { type: 'Grammar', title: 'Tables ', link: 'https://www.ielts.org/' },
+                { type: 'Vocabulary', title: 'Environment ', link: 'https://www.ielts.org/' },
+                { type: 'Listening', title: 'Sentence Completion ', link: 'https://www.ielts.org/' },
+                { type: 'Reading', title: 'Entertainment ', link: 'https://www.ielts.org/' },
+                { type: 'Grammar', title: 'Processes', link: 'https://www.ielts.org/' },
+                { type: 'Listening', title: 'Short Answer ', link: 'https://www.ielts.org/' },
+                { type: 'Vocabulary', title: 'Holidays ', link: 'https://www.ielts.org/' },
+                { type: 'Grammar', title: 'Day 19  todoList &  Router 1', link: 'https://www.ielts.org/' },
+                { type: 'Listening', title: 'Summary Completion', link: 'https://www.ielts.org/' },
+                { type: 'Listening', title: 'Table Completion', link: 'https://www.ielts.org/' },
+                { type: 'Vocabulary', title: 'Health', link: 'https://www.ielts.org/' },
+                { type: 'Listening', title: 'Note Completion', link: 'https://www.ielts.org/' },
+                { type: 'Grammar', title: 'Say or Tell', link: 'https://www.ielts.org/' },
+                { type: 'Vocabulary', title: 'Connecting words', link: 'https://www.ielts.org/' },
+                { type: 'Listening', title: 'Form Completion', link: 'https://www.ielts.org/' },
+                { type: 'Vocabulary', title: 'Business', link: 'https://www.ielts.org/' },
+                { type: 'Reading', title: 'Society', link: 'https://www.ielts.org/' }, 
+                { type: 'Speaking', title: 'Negotiators Check List', link: 'https://www.ielts.org/' },
+                { type: 'Speaking', title: 'Negotiation Process', link: 'https://www.ielts.org/' },
+                { type: 'Speaking', title: 'Negotiation Sentences', link: 'https://www.ielts.org/' }, 
+                { type: 'Listening', title: 'Diagram Completion', link: 'https://www.ielts.org/' }, 
+                { type: 'Speaking', title: 'Direct and Indirect questions', link: 'https://www.ielts.org/' }, 
+                { type: 'Reading', title: 'Employment', link: 'https://www.ielts.org/' }, 
+                { type: 'Grammar', title: 'Conditional ', link: 'https://www.ielts.org/' }, 
+            
+            ]
+        }
+
+
+        let vm = new Vue({
+            el: '#app',
+            data: data,
+            methods: {
+                inpuHandler() {
+                    if (this.input.title) {
+                        this.menu.push({
+                            type: this.input.type,
+                            title: this.input.title,
+                            link: 'javascript:;'
+
+                        })
+
+                        this.input.title = ''
+                    }
+
+                }
+            }
+
+        })
+
+    </script>
+</body>
+
+</html>
