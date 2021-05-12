@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IELTS level Up Free Preveiw  </title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+<style>
+    body {
+        background-color: rgb(245, 244, 240);
+    }
+
+    .container {
+        width: 50vw;
+        height: 8vh;
+        background-color: rgb(53, 137, 247);
+        border-radius: 4px;
+        margin: 0 auto;
+        margin-top: 20vh;
+
+
+    }
+
+    h1 {
+
+        display: flex;
+        color: rgb(255, 255, 255);
+        margin: 0 auto;
+        justify-content: center;
+        padding-top: 2vh;
+        margin-bottom: 10vh;
+        letter-spacing: 1.7px;
+    }
+
+    .logo {
+        width: 15%;
+        margin-top: -25vh;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .descrition {
+        display: flex;
+        justify-content: center;
+        margin-top: 5vh;
+
+    }
+
+    .menuItem {
+        width: 50vw;
+        height: 8vh;
+        background-color: rgb(53, 137, 247);
+        border-radius: 10px;
+        z-index: 0;
+        display: flex;
+    }
+
+    .arrow-left {
+        color: rgb(49, 65, 64);
+        padding-right: 1vw;
+        margin-top: 2.3vh;
+    }
+
+    .arrow-right {
+        color: rgb(49, 65, 64);
+        padding-left: 1vw;
+        margin-top: 2.3vh;
+    }
+
+    .number {
+        width: 4vw;
+        height: 100%;
+        background-color: #e31837;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: white;
+        z-index: 2;
+        border-radius: 10px 0px 0px 10px;
+        font-size: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .type {
+        width: 13vw;
+        height: 100%;
+        background-color: rgb(19, 9, 43);
+        font-family: 'Times New Roman', Times, serif;
+        color: white;
+        z-index: 2;
+        font-size: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 1.5px;
+    }
+
+    .class-title {
+        width: 33vw;
+        height: 100%;
+        font-family: 'Times New Roman', Times, serif;
+        color: white;
+        z-index: 2;
+        font-size: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        cursor: pointer;
+        letter-spacing: 1.5px;
+
+    }
+
+    .class-title:hover {
+        color:rgb(19, 9, 43);
+    }
+</style>
+
+<body>
+    <div id="app">
+        <section class="container">
+            <div class="title">
+
+                <h1>{{title}}</h1>
+
+            </div>
+            <img class="logo" v-bind:src="src">
+            <!-- <img class="logo" :src="src"> -->
+
+            <div class="descrition">
+                <a class="fas fa-arrow-circle-left fa-2x arrow-left" v-on:click="changeIndex(-1)"></a>
+                <div class="menuItem">
+                    <span class="number">{{index + 1}}</span>
+                    <span class="type">{{menu[index].type}}</span>
+                    <a class="class-title" target="vue-item" v-bind:href="menu[index].link">{{menu[index].title}}</a>
+                </div>
+                <a class="fas fa-arrow-circle-right fa-2x arrow-right" v-on:click="changeIndex(+1)"></a>
+            </div>
+        </section>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+
+        let data = {
+            src: './img/IELTS-510.png',
+            title: 'IELTS level Up Free Preveiw ',
+            index: 0,
+            menu: [
+                { type: 'Listening', title: 'Diagram Labeling ', link: 'https://www.ielts.org/' },
+                { type: 'Reading', title: 'Flowchart - Natural Water Cycle', link: 'https://www.ielts.org/' },
+                { type: 'Grammar', title: 'Line charts ', link: 'https://www.ielts.org/' },
+                { type: 'Grammar', title: 'Pie charts ', link: 'https://www.ielts.org/' },
+                { type: 'Vocabulary', title: 'Topics ', link: 'https://www.ielts.org/' },
+                { type: 'Listening', title: 'Map Labeling ', link: 'https://www.ielts.org/' },
+                { type: 'Speaking', title: ' Negotiation Skills', link: 'https://www.ielts.org/' },
+                { type: 'Reading', title: 'Diagrams and illustrations ', link: 'https://www.ielts.org/' },
+                { type: 'Grammar', title: 'Bar charts', link: 'https://www.ielts.org/' },
+                { type: 'Reading', title: 'Finance ', link: 'https://www.ielts.org/' },
+                { type: 'Listening', title: 'Multiple Choice ', link: 'https://www.ielts.org/' },
+                { type: 'Grammar', title: 'Tables ', link: 'https://www.ielts.org/' },
+                { type: 'Vocabulary', title: 'Environment ', link: 'https://www.ielts.org/' },
+                { type: 'Listening', title: 'Sentence Completion ', link: 'https://www.ielts.org/' },
+                { type: 'Reading', title: 'Entertainment ', link: 'https://www.ielts.org/' },
+                { type: 'Grammar', title: 'Processes', link: 'https://www.ielts.org/' },
+                { type: 'Listening', title: 'Short Answer ', link: 'https://www.ielts.org/' },
+                { type: 'Vocabulary', title: 'Holidays ', link: 'https://www.ielts.org/' },
+                { type: 'Grammar', title: 'Day 19  todoList &  Router 1', link: 'https://www.ielts.org/' },
+                { type: 'Listening', title: 'Summary Completion', link: 'https://www.ielts.org/' },
+                { type: 'Listening', title: 'Table Completion', link: 'https://www.ielts.org/' },
+                { type: 'Vocabulary', title: 'Health', link: 'https://www.ielts.org/' },
+                { type: 'Listening', title: 'Note Completion', link: 'https://www.ielts.org/' },
+                { type: 'Grammar', title: 'Say or Tell', link: 'https://www.ielts.org/' },
+                { type: 'Vocabulary', title: 'Connecting words', link: 'https://www.ielts.org/' },
+                { type: 'Listening', title: 'Form Completion', link: 'https://www.ielts.org/' },
+                { type: 'Vocabulary', title: 'Business', link: 'https://www.ielts.org/' },
+                { type: 'Reading', title: 'Society', link: 'https://www.ielts.org/' }, 
+                { type: 'Speaking', title: 'Negotiators Check List', link: 'https://www.ielts.org/' },
+                { type: 'Speaking', title: 'Negotiation Process', link: 'https://www.ielts.org/' },
+                { type: 'Speaking', title: 'Negotiation Sentences', link: 'https://www.ielts.org/' }, 
+                { type: 'Listening', title: 'Diagram Completion', link: 'https://www.ielts.org/' }, 
+                { type: 'Speaking', title: 'Direct and Indirect questions', link: 'https://www.ielts.org/' }, 
+                { type: 'Reading', title: 'Employment', link: 'https://www.ielts.org/' }, 
+                { type: 'Grammar', title: 'Conditional ', link: 'https://www.ielts.org/' }, 
+            
+            ]
+        }
+
+        // this = #app
+        let app = new Vue({
+            el: '#app',
+            data: data,
+            computed: {
+
+            },
+            methods: {
+                changeIndex: function (change) {
+                    //     this.index += change
+                    //    if (this.index < 0 ){
+                    //        this.index = 0
+
+                    //    } else if (this.index > this.menu.length - 1){
+                    //     this.index =  this.menu.length - 1
+                    //    }
+                    let longer = this.menu.length
+                    this.index = (this.index + change + longer) % longer
+                }
+
+            }
+        })
+    </script>
+</body>
+
+</html>
